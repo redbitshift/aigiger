@@ -12,7 +12,7 @@ from PIL import Image
 gflags.DEFINE_string('in_dir', '', 'Input image directory')
 gflags.DEFINE_string('out_dir', '', 'Output data directory')
 gflags.DEFINE_integer('size', 128, 'Size of a single ground truth image')
- 
+
 F = gflags.FLAGS
 
 gflags.register_validator('in_dir', os.path.isdir, 'Invalid input path')
@@ -93,6 +93,7 @@ def main(argv):
         x.save(os.path.join(F.out_dir, '%04d.png' % i))
 
     return 0
+
 
 if __name__ == '__main__':
     F(sys.argv)
