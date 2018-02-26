@@ -90,7 +90,7 @@ def main(argv):
     print('i Generated %d examples' % len(examples))
 
     for i, x in enumerate(examples):
-        x.save(os.path.join(F.out_dir, '%04d.png' % i))
+        x.save(os.path.join(F.out_dir, '%04d.jpeg' % i))
 
     return 0
 
